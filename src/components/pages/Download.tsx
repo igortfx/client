@@ -1,5 +1,6 @@
 import React from 'react';
 import Moment from 'react-moment';
+import 'moment/min/locales.min';
 
 // Icons
 import { ReactComponent as SuccessIcon } from 'assets/icons/success.svg';
@@ -90,6 +91,8 @@ const DownloadItem: React.FC<ItemProps> = ({
           style={{ display: 'inline-block', whiteSpace: 'nowrap' }}
           fromNow
           unix
+          titleFormat='LL'
+          locale={process.env.REACT_APP_LOCALE || 'en-us'}
           withTitle
         >
           {date}
