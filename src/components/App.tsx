@@ -44,20 +44,23 @@ const App: React.FC<Props> = () => {
   }, [dispatch]);
 
   return (
-    <Router>
-      <div className='App'>
-        <Navbar />
-        <Header />
-        <div className='Container'>
-          <LeftSidebar />
-          <MainContent />
-          <RightSidebar />
+    <>
+      <title>{process.env.REACT_APP_MU_NAME}</title>
+      <Router>
+        <div className='App'>
+          <Navbar />
+          <Header />
+          <div className='Container'>
+            <LeftSidebar />
+            <MainContent />
+            <RightSidebar />
+          </div>
+          <Footer />
+          <Loader active={loading === null} styles='dark' />
         </div>
-        <Footer />
-        <Loader active={loading === null} styles='dark' />
-      </div>
-      <ReactNotification />
-    </Router>
+        <ReactNotification />
+      </Router>
+    </>
   );
 };
 

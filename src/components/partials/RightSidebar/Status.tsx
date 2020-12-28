@@ -9,7 +9,7 @@ const Status: React.FC<Props> = () => {
       <div className='image online' />
       <div className='info'>
         <div className='top'>
-          <span>NyxWeb</span>
+          <span>{process.env.REACT_APP_MU_NAME}</span>
           <span>
             Online <span className='count'>178</span>
           </span>
